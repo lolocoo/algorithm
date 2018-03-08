@@ -4,7 +4,6 @@ const [ MAX, MIN, STRING, AMOUNT ] = [
     'ABCDEDFHIJKLMNOPQRSTUVWXYZabcdedfhijklmnopqrstuvwxyz0123456789_',
     20
 ]
-
 const { floor, random } = Math
 
 function getRandomNumber (min = MIN, max = MAX) {
@@ -38,12 +37,10 @@ function getRandomStrings ({ amount = AMOUNT, string = STRING } = {}) {
     }
     return str.join('')
 }
-
 function noRepeat (...args) {
     let isString = typeof(args[0]) === 'string'
     return isString ? [...new Set(args[0])].join('') : [...new Set(args)]
 }
-
 module.exports = {
     getRandomNumber,
     getRandomNumbers,
